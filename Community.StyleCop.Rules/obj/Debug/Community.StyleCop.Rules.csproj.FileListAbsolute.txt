@@ -1,0 +1,10 @@
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\obj\Debug\Community.StyleCop.Rules.csprojResolveAssemblyReference.cache
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\Community.StyleCop.CSharp.Rules.xml
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\Community.StyleCop.CSharp.Rules.dll
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\Community.StyleCop.CSharp.Rules.pdb
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\Community.StyleCop.CSharp.Rules.dll.CodeAnalysisLog.xml
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\Community.StyleCop.CSharp.Rules.dll.lastcodeanalysissucceeded
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\StyleCop.CSharp.dll
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\bin\Debug\StyleCop.dll
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\obj\Debug\Community.StyleCop.CSharp.Rules.dll
+C:\Users\danielandres\Documents\GitHub\Community.StyleCop.Rules\Community.StyleCop.Rules\obj\Debug\Community.StyleCop.CSharp.Rules.pdb

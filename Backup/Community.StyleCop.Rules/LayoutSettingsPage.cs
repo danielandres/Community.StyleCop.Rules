@@ -24,11 +24,10 @@ using System;
 using System.Globalization;
 using System.Windows.Forms;
 
+using Microsoft.StyleCop;
 
 namespace Community.StyleCop.CSharp
 {
-    using global::StyleCop;
-
     /// <summary>
     /// Settings tab for configuring the LayoutRules analyzer.
     /// </summary>

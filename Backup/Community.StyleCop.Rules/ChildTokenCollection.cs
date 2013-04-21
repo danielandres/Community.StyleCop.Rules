@@ -27,12 +27,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 
+using Microsoft.StyleCop;
+using Microsoft.StyleCop.CSharp;
 
 namespace Community.StyleCop.CSharp
 {
-    using global::StyleCop;
-    using global::StyleCop.CSharp;
-
     /// <summary>
     /// Collection for iterating through tokens. If a token contains child
     /// tokens, these will be returned instead of their parent token.

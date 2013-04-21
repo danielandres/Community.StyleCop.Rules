@@ -25,13 +25,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 
-
+using Microsoft.StyleCop;
+using Microsoft.StyleCop.CSharp;
 
 namespace Community.StyleCop.CSharp
 {
-    using global::StyleCop;
-    using global::StyleCop.CSharp;
-
     /// <summary>
     /// Community rules for checking the layout of a file.
     /// </summary>

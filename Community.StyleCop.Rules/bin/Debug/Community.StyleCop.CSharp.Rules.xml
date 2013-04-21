@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Community.StyleCop.CSharp.Rules</name>
+    </assembly>
+    <members>
+        <member name="T:Community.StyleCop.CSharp.ChildTokenCollection">
+            <summary>
+            Collection for iterating through tokens. If a token contains child
+            tokens, these will be returned instead of their parent token.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.ChildTokenCollection.tokens">
+            <summary>
+            The tokens of this collection.
+            </summary>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.ChildTokenCollection.#ctor(StyleCop.MasterList{StyleCop.CSharp.CsToken})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Community.StyleCop.CSharp.ChildTokenCollection"/> class.
+            </summary>
+            <param name="tokens">The tokens that this collection exposes.
+            </param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="tokens"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.ChildTokenCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to
+            iterate through the collection.</returns>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.ChildTokenCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/> object that can be used to
+            iterate through the collection.</returns>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.ChildTokenCollection.HasChildTokens(StyleCop.CSharp.CsToken,StyleCop.MasterList{StyleCop.CSharp.CsToken}@)">
+            <summary>
+            Determines whether the specified type has a <c>ChildTokens</c>
+            property that returns a <see cref="T:StyleCop.MasterList`1"/>.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="childTokens">If available, the value of the
+            <c>ChildTokens</c> property; otherwise <c>null</c>.</param>
+            <returns><c>true</c> if the <paramref name="token"/> has a
+            <c>ChildTokens</c> property and <paramref name="childTokens"/> is
+            not <c>null</c>; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="token"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.ChildTokenCollection.GetNextNode(StyleCop.Node{StyleCop.CSharp.CsToken},System.Collections.Generic.Stack{StyleCop.Node{StyleCop.CSharp.CsToken}})">
+            <summary>
+            Gets the next node.
+            </summary>
+            <param name="node">A node of a linked list which contains tokens.
+            </param>
+            <param name="tokenListStack">The stack containing linked lists
+            which contain tokens.</param>
+            <returns>Returns <paramref name="node.Next"/> if it is not
+            <c>null</c>; otherwise returns the <c>Next</c> property of top
+            <paramref name="tokenListStack"/> node if it has a positive number
+            of elements; otherwise returns <c>null</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="node"/> or <paramref name="tokenListStack"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:Community.StyleCop.CSharp.LayoutSettingsPage">
+            <summary>
+            Settings tab for configuring the LayoutRules analyzer.
+            </summary>
+            <summary>
+            Settings tab for configuring the LayoutRules analyzer.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.LayoutSettingsPage.SettingsTabName">
+            <summary>
+            Title of the settings tab.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.LayoutSettingsPage.dirty">
+            <summary>
+            Indicates whether the contents of the tab have changed.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.LayoutSettingsPage.tabControl">
+            <summary>
+            The control that hosts the tabs.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.LayoutSettingsPage.analyzer">
+            <summary>
+            The analyzer that is configured through this tab.
+            </summary>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.#ctor(Community.StyleCop.CSharp.LayoutRules)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Community.StyleCop.CSharp.LayoutSettingsPage"/>
+            class.
+            </summary>
+            <param name="analyzer">The analyzer.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="analyzer"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.Activate(System.Boolean)">
+            <summary>
+            This method is unused.
+            </summary>
+            <param name="activated">This parameter is unused.</param>
+            <remarks>This method's implementation is empty.</remarks>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.Apply">
+            <summary>
+            Saves settings the user confirmed.
+            </summary>
+            <returns>Always returns <c>true</c>.</returns>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.Initialize(StyleCop.PropertyControl)">
+            <summary>
+            Initializes this tab.
+            </summary>
+            <param name="propertyControl">The property control that hosts this
+            tab.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="propertyControl"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.PostApply(System.Boolean)">
+            <summary>
+            Called before <see cref="M:Community.StyleCop.CSharp.LayoutSettingsPage.Apply"/> is called.
+            </summary>
+            <param name="wasDirty">This parameter is unused.</param>
+            <remarks>This method's implementation is empty.</remarks>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.PreApply">
+            <summary>
+            Called after <see cref="M:Community.StyleCop.CSharp.LayoutSettingsPage.Apply"/> was called.
+            </summary>
+            <returns>Always returns <c>true</c>.</returns>
+            <remarks>This method only returns <c>true</c> and performs no other
+            tasks.</remarks>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.RefreshSettingsOverrideState">
+            <summary>
+            This method is unused.
+            </summary>
+            <remarks>This method's implementation is empty.</remarks>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.InitializeSettings">
+            <summary>
+            Loads the current settings and initializes the controls on the
+            form.
+            </summary>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.TextBoxTextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="!:TextBox.TextChanged"/> event of the <see cref="F:Community.StyleCop.CSharp.LayoutSettingsPage.maximumLineLengthTextBox"/> control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance
+            containing the event data.</param>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.LayoutSettingsPage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be
+            disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutSettingsPage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Community.StyleCop.CSharp.LayoutSettingsPage.Dirty">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Community.StyleCop.CSharp.LayoutSettingsPage"/> is dirty.
+            </summary>
+            <value><c>true</c> if dirty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Community.StyleCop.CSharp.LayoutSettingsPage.TabName">
+            <summary>
+            Gets the name of the tab.
+            </summary>
+            <value>The name of the tab.</value>
+        </member>
+        <member name="T:Community.StyleCop.CSharp.Rules">
+            <summary>
+            Enumeration that represents the rules offered by the analyzers.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Rules.LinesMustNotBeLongerThanNumCharacters">
+            <summary>
+            Represents the rule that checks line length.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Rules.LinesMustNotEndWithWhitespace">
+            <summary>
+            Represents the rule that checks for trailing whitespace.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Rules.FilesMustNotEndWithMultipleEmptyLines">
+            <summary>
+            Represents the rule that checks for empty lines at the end of file.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Rules.FilesMustNotStartWithWhitespace">
+            <summary>
+            Represents the rule that checks for whitespace at the beginning of
+            file.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Rules.FilesMustEndWithNewline">
+            <summary>
+            Represents the rule that checks if a file ends with a newline.
+            </summary>
+        </member>
+        <member name="T:Community.StyleCop.CSharp.LayoutRules">
+            <summary>
+            Community rules for checking the layout of a file.
+            </summary>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.AnalyzeDocument(StyleCop.CodeDocument)">
+            <summary>
+            Analyzes the document.
+            </summary>
+            <param name="document">The document.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="document"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.GetValue``1(StyleCop.Settings,System.String)">
+            <summary>
+            Gets the value of the specified property.
+            </summary>
+            <typeparam name="T">Type of the property's value.</typeparam>
+            <param name="settings">The settings.</param>
+            <param name="propertyName">Name of the property.</param>
+            <returns>If available, returns the configured value of the
+            specified property; otherwise the property's default value is
+            returned.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="settings"/> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is <c>null</c> or empty.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.HasTrailingWhitespace(System.String)">
+            <summary>
+            Determines whether the specified string has trailing whitespace.
+            </summary>
+            <param name="s">The string to check for trailing whitespace.
+            </param>
+            <returns><c>true</c> if <paramref name="s"/> has trailing
+            whitespace; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="s"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.IsEatLineToken(StyleCop.CSharp.CsToken)">
+            <summary>
+            Determines whether the specified token type occupies the rest of
+            the line.
+            </summary>
+            <param name="token">The token.</param>
+            <returns><c>true</c> if the specified token occupies the rest of
+            the line; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="token"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.GetDefaultValue``1(System.String)">
+            <summary>
+            Gets the default value of the specified property.
+            </summary>
+            <typeparam name="T">Type of the property's value.</typeparam>
+            <param name="propertyName">Name of the property.</param>
+            <returns>The default value of the specified property.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="propertyName"/> is <c>null</c> or empty.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if a property
+            descriptor for <paramref name="propertyName"/> cannot be retrieved.
+            </exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.IterateDocumentTokens(StyleCop.CSharp.CsDocument)">
+            <summary>
+            Iterates through the document tokens.
+            </summary>
+            <param name="csDocument">The C# document.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="csDocument"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckForLinesWithTrailingWhitespace(StyleCop.CSharp.DocumentRoot,StyleCop.CSharp.CsToken,StyleCop.CSharp.CsToken)">
+            <summary>
+            Checks for lines with trailing whitespace.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="token">The current token.</param>
+            <param name="previousToken">The previous token or <c>null</c> if
+            there is no previous token.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/> or <paramref name="token"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckMultiLineComment(StyleCop.CSharp.DocumentRoot,StyleCop.CSharp.CsToken,System.Func{System.String,System.Int32,System.Boolean},Community.StyleCop.CSharp.Rules,System.Object[])">
+            <summary>
+            Checks a multi-line comment.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="token">The token.</param>
+            <param name="checkDelegate">The delegate that checks each comment
+            line.</param>
+            <param name="violatedRuleIfCheckFails">The rule that is violated if
+            the check succeeds.</param>
+            <param name="violationContext">Context to make the violation
+            message more meaningful.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/>, <paramref name="token"/> or <paramref name="checkDelegate"/> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if the supplied token is
+            not a multi-line comment.</exception>
+            <remarks>This method does not check if the supplied token is
+            generated or not. If generated code should not be checked, this has
+            to be taken care of in the calling method.</remarks>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckLineLength(StyleCop.CSharp.DocumentRoot,StyleCop.CSharp.CsToken,System.Int32)">
+            <summary>
+            Checks length of the lines.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="token">The document token.</param>
+            <param name="maximumLineLength">Maximum allowed length of a line.
+            </param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/> or <paramref name="token"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="maximumLineLength"/> is not positive.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckIfDocumentEndsWithMultipleWhitespaceLines(StyleCop.CSharp.DocumentRoot,StyleCop.Node{StyleCop.CSharp.CsToken})">
+            <summary>
+            Checks if the document ends with multiple whitespace lines.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="lastNode">The last node of the linked token list.
+            </param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/> or <paramref name="lastNode"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckIfFileStartsWithWhitespace(StyleCop.CSharp.DocumentRoot,StyleCop.CSharp.CsToken)">
+            <summary>
+            Checks if the file starts with whitespace.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="firstToken">The first document token.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/> or <paramref name="firstToken"/> is
+            <c>null</c>.</exception>
+        </member>
+        <member name="M:Community.StyleCop.CSharp.LayoutRules.CheckIfFileEndsWithNewline(StyleCop.CSharp.DocumentRoot,StyleCop.CSharp.CsToken)">
+            <summary>
+            Checks if the file ends with newline.
+            </summary>
+            <param name="rootElement">The root element.</param>
+            <param name="lastToken">The last document token.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="rootElement"/> or <paramref name="lastToken"/> is
+            <c>null</c>.</exception>
+        </member>
+        <member name="P:Community.StyleCop.CSharp.LayoutRules.SettingsPages">
+            <summary>
+            Gets the settings pages to show on the settings dialog.
+            </summary>
+            <value>The settings pages.</value>
+        </member>
+        <member name="P:Community.StyleCop.CSharp.LayoutRules.IncludeGenerated">
+            <summary>
+            Gets or sets a value indicating whether to include generated code.
+            </summary>
+            <value><c>true</c> if generated code should be checked; otherwise,
+            <c>false</c>.</value>
+        </member>
+        <member name="T:Community.StyleCop.CSharp.Strings">
+            <summary>
+            Class that holds strings which are used in the whole project.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Strings.IncludeGenerated">
+            <summary>
+            The string <i>IncludeGenerated</i>.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Strings.MaximumLineLength">
+            <summary>
+            The string <i>MaximumLineLength</i>.
+            </summary>
+        </member>
+        <member name="F:Community.StyleCop.CSharp.Strings.ChildTokens">
+            <summary>
+            The string <i>ChildTokens</i>.
+            </summary>
+        </member>
+    </members>
+</doc>
